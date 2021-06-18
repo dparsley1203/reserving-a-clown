@@ -1,16 +1,21 @@
 import { getRequests } from "./dataAccess.js"
+// import { getClowns } from "./dataAccess.js"
 
 export const Requests = () => {
     const requests = getRequests() // grab the local state of the requests data
+    // const clowns = getClowns()
     const requestList = (request) => 
         `<li>
             ${request.parentName} wants to have a party for ${request.childName} on ${request.partyDate}.  The party should last ${request.partyLength} hours.
+            <select>
+                <option value="">Choose</option>
+            </select>
             <button class="request__delete"
                 id="request--${request.id}"> Reject
             </button>
         </li>`
     
-    let html = `
+      let html = `
         <ul>
             ${
                 requests.map(requestList).join("")
@@ -19,6 +24,7 @@ export const Requests = () => {
     `
 
     return html
+    
 }
 
 // const startDate = "2021-06-08"

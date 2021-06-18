@@ -15,6 +15,17 @@ export const fetchRequests = () => {
         )
 }
 
+// export const fetchClowns = () => {
+//     return fetch(`${API}/clowns`)
+//         .then(response => response.json())
+//         .then(
+//             (serviceClowns) => {
+//                 // Store the external state in application state
+//                 applicationState.requests = serviceClowns
+//             }
+//         )
+// }
+
 const mainContainer = document.querySelector("#container");
 
 export const sendRequest = (userServiceRequest) => {
@@ -49,3 +60,4 @@ export const deleteRequest = (id) => {
 
 
 export const getRequests = () => [...applicationState.requests]
+// export const getClowns = () => [...applicationState.clowns]

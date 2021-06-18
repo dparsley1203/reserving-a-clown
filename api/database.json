@@ -1,5 +1,14 @@
 {
-  "clowns": [],
+  "clowns": [
+      {
+        "name": "Buttons",
+        "id": 1
+      },
+      {
+        "name": "Lollipop",
+        "id": 2
+      }
+  ],
   "completions": [],
   "requests": [
     {
